@@ -4,7 +4,7 @@ MAINTAINER johanneshertel
 
 USER root
 
-RUN apt-get update && apt-get install -y python3 python3-pip && apt-get install -y cron
+RUN apt-get update && apt-get install -y python3 python3-pip && apt-get install -y cron && apt-get clean all
 
 RUN pip3 install requests && pip3 install influxdb
 
