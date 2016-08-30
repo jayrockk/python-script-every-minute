@@ -4,7 +4,7 @@ MAINTAINER johanneshertel
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y && apt-get install python3 -y && apt-get install cron
+RUN apt-get update && apt-get upgrade -y && apt-get install python3 -y && apt-get install cron && service cron start
 
 ADD ./script/script.py /home/script.py
 
