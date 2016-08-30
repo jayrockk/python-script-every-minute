@@ -4,7 +4,9 @@ MAINTAINER johanneshertel
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y python3 && apt-get install -y cron
+RUN apt-get update && apt-get upgrade -y && apt-get install -y python3 python3-pip && apt-get install -y cron
+
+RUN pip3 install requests && pip3 install influxdb
 
 COPY ./script/script.py /home/script.py
 
